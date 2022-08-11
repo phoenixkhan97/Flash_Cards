@@ -1,0 +1,26 @@
+{
+  "name": "flash_cards",
+  "version": "1.0.0",
+  "description": "Quizzards introduces a simple studying tool called Flash Cards. This is a full stack PERN  application that will allow users to create their own log in, full CRUD operations on their own  cards, and be able to read other user's cards.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sahidankhan/Flash_Cards.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sahidankhan/Flash_Cards/issues"
+  },
+  "homepage": "https://github.com/sahidankhan/Flash_Cards#readme",
+  "dependencies": {
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.21.3",
+    "sequelize-cli": "^6.4.1"
+  }
+}
