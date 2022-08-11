@@ -8,6 +8,42 @@ html{
   margin-top: 0;
 }
 .nav-bar{
-  background: rgb(200, 204, 214);
-  padding-top: 6rem;
+  background: rgb(139, 171, 147);
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+}
+
+.footer{
+  background-color:rgb(139, 171, 147);
+  padding: 2.5rem;
+
+  bottom:auto;
+  width: 100%;
+}
+/* .main-image{
+  float:right;
+} */
+
+.nav-title{
+  font-family: 'Rubik Dirt';
+  font-size:8rem;
+  color: rgb(39, 100, 68);
+  padding:0;
+}
+.main-h2{
+font-size: 2rem;
+padding:3rem;
+}
+
+.main-h1{
+font-family: 'Rubik Dirt';
+font-size:5rem;
+color: rgb(39, 100, 68);
+}
+
+h2{
+  font-family: 'Knewave', cursive;
+font-family: 'Rubik Dirt', cursive;
+font-size: 2rem;
+color:rgb(39, 100, 68);
 }
