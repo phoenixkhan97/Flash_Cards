@@ -6,13 +6,13 @@ cards, and be able to read other user's cards.
 
 ## Getting Started 
 
-##Trello
+## Trello
 
 
-##WireFraming
+## WireFraming
 
 
-##ERD
+## ERD
 
 
-##Slide
+## Slide
