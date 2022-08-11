@@ -1,4 +1,4 @@
-const {Card, Library, User, sequelize} = require('../../models')
+const {Card, Library, User, sequelize} = require('../models')
 
 const getCardById = async () =>{
 

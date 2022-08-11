@@ -11,7 +11,7 @@ const getUserById = async () =>{
                 attrubutes:['id', 'username']
             }]
         })
-        stringify(users)
+        res.send(users)
     } catch(error){
         console.log(error)
     }
