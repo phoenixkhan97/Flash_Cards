@@ -7,8 +7,7 @@ cards, and be able to read other user's cards.
 ## Getting Started 
 
 ## Trello
-
-
+[Trello](https://i.ibb.co/KXZ16y6/Screen-Shot-2022-08-11-at-10-40-22.png)
 ## WireFraming
 
 
