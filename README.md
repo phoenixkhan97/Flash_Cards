@@ -13,6 +13,7 @@ cards, and be able to read other user's cards.
 [WireFraming](https://i.ibb.co/Cb7J02H/image.png)
 
 ## Trello
-[Trello] (https://trello.com/b/ZxArPB7G/flashcards)
+[Trello](https://trello.com/b/ZxArPB7G/flashcards)
 
 ## Slide
+[Google Slide](https://docs.google.com/presentation/d/1Z1hGgl8TPZHiI__iynoryPQkkQF-Jh7XeLSCbq2nb4o/edit?usp=sharing)
