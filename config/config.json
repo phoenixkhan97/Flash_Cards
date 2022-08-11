@@ -1,16 +1,34 @@
 {
   "development": {
+<<<<<<< HEAD
+    "username": "black",
+    "password": "1234",
+    "database": "flash_cards",
+=======
     "database": "quizCard",
+>>>>>>> 13d7417ddb200b823e4cf3404a0a14d962b6eded
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
+<<<<<<< HEAD
+    "username": "black",
+    "password": "1234",
+    "database": "database_test",
+=======
     "database": "quizCard_test",
+>>>>>>> 13d7417ddb200b823e4cf3404a0a14d962b6eded
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
+<<<<<<< HEAD
+    "username": "black",
+    "password": "1234",
+    "database": "database_production",
+=======
     "database": "quizCard_production",
+>>>>>>> 13d7417ddb200b823e4cf3404a0a14d962b6eded
     "host": "127.0.0.1",
     "dialect": "postgres"
   }
