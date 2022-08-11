@@ -1,0 +1,13 @@
+body{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+html{
+  margin-top: 0;
+}
+.nav-bar{
+  background: rgb(200, 204, 214);
+  padding-top: 6rem;
+}
