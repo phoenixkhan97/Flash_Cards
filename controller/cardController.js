@@ -1,16 +1,4 @@
-const {Card, Library, User, sequelize} = require('./models')
-const stringify = require('../utils')
-
-const getUserById = async () =>{
-    const user = await User.findAll({
-        
-    })
-    try{
-
-    } catch(error){
-        console.log(error)
-    }
-}
+const {Card, Library, User, sequelize} = require('../../models')
 
 const getCardById = async () =>{
 
@@ -49,9 +37,10 @@ const deleteCard = async () =>{
 }
 
 
+
 const main = async()=>{
     try{
-    //await
+    
 
 }catch(error){
     console.log(error)
