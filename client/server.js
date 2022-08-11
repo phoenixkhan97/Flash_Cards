@@ -1,7 +1,7 @@
 const express = require("express");
-const cors = require("cors");
+const cors = require("cors"); // installed 8/11/22
 
-const app = express();
+const app = express(); //installed 8/11/22
 
 const AppRouter = require("./routes/AppRouter");
 
