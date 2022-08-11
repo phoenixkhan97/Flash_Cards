@@ -1,5 +1,5 @@
-const express = require("express");
-const cors = require("cors");
+const express = require("express"); //installed 8/11
+const cors = require("cors"); // installed 8/11
 
 const app = express();
 
