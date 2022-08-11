@@ -7,7 +7,7 @@ cards, and be able to read other user's cards.
 ## Getting Started 
 
 ##Trello
-![Trello](https://trello.com/b/ZxArPB7G/flashcards)
+
 
 ##WireFraming
 
