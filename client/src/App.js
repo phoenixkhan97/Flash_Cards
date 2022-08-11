@@ -1,5 +1,7 @@
 import "./App.css";
 import Nav from "./components/Nav";
+import Footer from "./components/Footer";
+import studyImg from "./images/knowledge1.png";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import AddCard from "./pages/AddCard";
@@ -22,7 +24,13 @@ function App() {
       <nav>
         <Nav />
       </nav>
-      <main>
+
+      <main className>
+        <h1 className="main-h1">Unlock Your Potential</h1>
+        <h2 className="main-h2">Knowledge is Power!</h2>
+        <img className="main-image" src={studyImg} />
+      </main>
+      <div>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/AddCard" element={<AddCard />} />
@@ -33,7 +41,11 @@ function App() {
           <Route path="/Card/Quiz" element={<Quiz />} />
           <Route path="/Register" element={<Register />} />
         </Routes>
-      </main>
+      </div>
+
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
