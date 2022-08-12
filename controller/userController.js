@@ -17,15 +17,8 @@ const getUserById = async () =>{
     }
 }
 
-const main = async()=>{
-    try{
-    await getUserById()
 
-}catch(error){
-    console.log(error)
-}finally{
-    sequelize.close()
-}
+module.exports = {
+    getUserById
 }
 
-main()
