@@ -38,10 +38,8 @@ const updateCard = async (req,res) => {
   try {
     let cardId = parseInt(req.params.card_id)
     let updatedCard = await Card.update(req.body, {
-      where: {
-        id: cardId,
-        returning: true
-      }
+      where: {id: cardId},
+      returning:true
     })
     res.send(updatedCard)
   } catch (error) {
