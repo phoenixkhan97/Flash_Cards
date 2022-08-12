@@ -1,35 +1,39 @@
 import "./App.css";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
-import studyImg from "./images/knowledge1.png";
 import { Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
 import Home from "./pages/Home";
-import AddCard from "./pages/AddCard";
-import Card from "./pages/Card";
-import EditCard from "./pages/EditCard";
-import Login from "./pages/Login";
-import Profile from "./pages/Profile";
-import Quiz from "./pages/Quiz";
-import Register from "./pages/Register";
+import AddCard from "./pages/addCard";
+import Card from "./pages/card";
+import EditCard from "./pages/editCard";
+import Login from "./pages/login";
+import Profile from "./pages/profile";
+import Quiz from "./pages/quiz";
+import Register from "./pages/register";
 
-const linkStyle = {
-  margin: "1rem",
-  textDecoration: "none",
-  color: "white",
-};
+// const linkStyle = {
+//   margin: "1rem",
+//   textDecoration: "none",
+//   color: "white",
+// };
 
 function App() {
+  const [authenticated, toggleAuthenticated] = useState(false);
+  const [user, setUser] = useState(null);
+
+  const handleLogOut = () => {
+    setUser(null);
+    toggleAuthenticated(false);
+    localStorage.clear();
+  };
+
   return (
     <div className="App">
       <nav>
         <Nav />
       </nav>
 
-      <main className>
-        <h1 className="main-h1">Unlock Your Potential</h1>
-        <h2 className="main-h2">Knowledge is Power!</h2>
-        <img className="main-image" src={studyImg} />
-      </main>
       <div>
         <Routes>
           <Route path="/" element={<Home />} />
