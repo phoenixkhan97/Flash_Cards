@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
       Card.belongsTo(models.User, { foreignKey: 'creator_id' }),
         Card.belongsToMany(models.User, {
           through: models.Library,
-          foreignKey: 'cardId'
+          foreignKey: 'card_id'
         })
     }
   }

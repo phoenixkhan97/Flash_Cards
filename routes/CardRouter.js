@@ -1,8 +1,8 @@
 const Router = require('express').Router()
 const controller = require('../controller/cardController')
 
-Router.get('/card', controller.getCardById)
-Router.get('/card/types', controller.getAllByType)
+Router.get('/:card_id', controller.getCardById)
+Router.get('/card/:type', controller.getAllByType)
 
 Router.post('/:user_id', controller.createCard)
 
