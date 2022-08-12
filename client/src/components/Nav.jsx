@@ -5,8 +5,8 @@ function Nav() {
       <h1 className="nav-title">Quizards!</h1>
       <div>
         <NavLink to="/">Home |</NavLink>
-        <NavLink to="/library"> Library |</NavLink>
-        <NavLink to="/newCard"> Add Card</NavLink>
+        <NavLink to="/Register"> Sign up |</NavLink>
+        <NavLink to="/Login"> Login</NavLink>
       </div>
     </nav>
   );
