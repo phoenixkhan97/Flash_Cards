@@ -34,7 +34,7 @@ const createCard = async (req, res) => {
   }
 }
 
-const updateCard = async () => {
+const updateCard = async (req,res) => {
   try {
     let cardId = parseInt(req.params.card_id)
     let updatedCard = await Card.update(req.body, {
@@ -49,7 +49,7 @@ const updateCard = async () => {
   }
 }
 
-const deleteCard = async () => {
+const deleteCard = async (req,res) => {
   try {
     let cardId = parseInt(req.params.card_id)
     await Card.destroy({
