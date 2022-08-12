@@ -1,6 +1,6 @@
 const { Card, Library, User, sequelize } = require('../models')
 
-const getCardById = async () => {
+const getCardById = async (req,res) => {
   try {
     const getCardId = await Card.findByPk(req.params.card_id)
     res.send(getCardId)
@@ -9,10 +9,10 @@ const getCardById = async () => {
   }
 }
 
-const getAllByType = async () => {
+const getAllByType = async (req, res) => {
   try {
     const getType = await Card.findAll({
-      where: { type: typeId }
+     where: {type: req.params.type}
     })
     res.send(getType)
   } catch (error) {
@@ -34,7 +34,7 @@ const createCard = async (req, res) => {
   }
 }
 
-const updateCard = async () => {
+const updateCard = async (req,res) => {
   try {
     let cardId = parseInt(req.params.card_id)
     let updatedCard = await Card.update(req.body, {
@@ -49,7 +49,7 @@ const updateCard = async () => {
   }
 }
 
-const deleteCard = async () => {
+const deleteCard = async (req,res) => {
   try {
     let cardId = parseInt(req.params.card_id)
     await Card.destroy({
