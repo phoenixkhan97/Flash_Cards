@@ -4,13 +4,13 @@ import Footer from "./components/Footer";
 import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Home from "./pages/Home";
-import AddCard from "./pages/AddCard";
-import Card from "./pages/Card";
-import EditCard from "./pages/EditCard";
-import Login from "./pages/Login";
-import Profile from "./pages/Profile";
-import Quiz from "./pages/Quiz";
-import Register from "./pages/Register";
+import AddCard from "./pages/addCard";
+import Card from "./pages/card";
+import EditCard from "./pages/editCard";
+import Login from "./pages/login";
+import Profile from "./pages/profile";
+import Quiz from "./pages/quiz";
+import Register from "./pages/register";
 
 // const linkStyle = {
 //   margin: "1rem",

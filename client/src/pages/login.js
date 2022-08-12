@@ -40,7 +40,8 @@ const Login = () => {
               required
             />
           </div>
-          <button disabled={!formValues.email || !formValues.password}>
+          <button 
+          className = 'submit-btn' disabled={!formValues.email || !formValues.password}>
             Log In
           </button>
         </form>

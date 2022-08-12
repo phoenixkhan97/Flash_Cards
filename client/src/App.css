@@ -5,6 +5,8 @@ html body{
   height: 100%;
 }
 
+
+
 html{
   margin-top: 0;
 }
@@ -13,6 +15,19 @@ html{
   padding-top: 4rem;
   padding-bottom: 1rem;
   width:100%;
+}
+
+.nav-link{
+  position: absolute;
+   top:10px; 
+   right: 10px;
+   display: inline-block
+}
+
+.nav-link1{
+  color:white;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .footer{
@@ -27,18 +42,19 @@ html{
   font-size: 1rem;
   font-family: Arial, Helvetica, sans-serif;
 } 
-/* .main-image{
-  float:right;
-} */
+.main-image{
+  position:relative;
+}
 
 .nav-title{
   font-family: 'Rubik Dirt';
-  font-size:10rem;
+  font-size:7rem;
   color: white;
   padding:0;
   margin: 2rem;
 }
 .main-h2{
+  position: relative;
 font-size: 2rem;
 padding:3rem;
 }
@@ -48,6 +64,7 @@ font-family: 'Rubik Dirt';
 font-size:5rem;
 color: rgb(39, 100, 68);
 }
+
 
 h2{
   font-family: 'Knewave', cursive;
@@ -67,10 +84,6 @@ color:rgb(39, 100, 68);
   margin-top: 10%;
   margin-bottom: 10%;
 }
-
-/* .col-4 {
-  grid-template-columns: repeat(auto-fill, 400px);
-} */
 
 
 .inputwrapper {
@@ -92,7 +105,7 @@ input{
   height:1.5rem;
 }
 
-button {
+.submit-btn{
   background-color: var(--primary-button-hover);
   margin: 1em 0;
   color: var(--link-color-secondary);
@@ -101,3 +114,22 @@ button {
   height: 2rem;
   background-color:rgb(209, 238, 227)
 }
+
+
+.main-btn {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: rgb(139, 171, 147);
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+
+
