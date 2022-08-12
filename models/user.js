@@ -8,21 +8,27 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-
       User.hasMany(models.Card, { foreignKey: 'creatorId' })
-      User.belongsToMany(models.Card, {
-        through: models.Library,
-        as: 'library',
-        foreignKey: 'userId'
-
-      })
     }
   }
   User.init(
     {
-      name: DataTypes.STRING,
-      email: DataTypes.STRING,
-      passwordDigest: DataTypes.STRING
+      name: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      email: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: true,
+        validate: {
+          isEmail: true
+        }
+      },
+      passwordDigest: {
+        type: DataTypes.STRING,
+        allowNull: false
+      }
     },
     {
       sequelize,

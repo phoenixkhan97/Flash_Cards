@@ -1,21 +1,16 @@
-const {Card, Library, User, sequelize} = require('../models')
+const { Card, Library, User, sequelize } = require('../models')
 
-
-const getUserById = async () =>{
-
-    try{
-        const users = await User.findAll({
-            include:[{
-                model:User,
-                as:'user',
-                attrubutes:['id', 'username']
-            }]
-        })
-        res.send(users)
-    } catch(error){
-        console.log(error)
-    }
+const getUserById = async (req, res) => {
+  try {
+    const user = await User.findByPk(req.params.id, {
+      attributes: ['name', 'email']
+    })
+    res.send(user)
+  } catch (error) {
+    throw error
+  }
 }
+
 
 
 module.exports = {
