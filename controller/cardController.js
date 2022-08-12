@@ -20,17 +20,17 @@ const getAllByType = async () => {
   }
 }
 
-const createCard = async () => {
+const createCard = async (req, res) => {
   try {
     let creatorId = parseInt(req.params.user_id)
     let createBody = {
       creatorId,
-      ...(req / body)
+      ...req.body
     }
     let create = await Card.create(createBody)
     res.send(create)
   } catch (error) {
-    console.log(error)
+    throw error
   }
 }
 
@@ -62,7 +62,6 @@ const deleteCard = async () => {
     console.log(error)
   }
 }
-
 
 module.exports = {
   getCardById,
