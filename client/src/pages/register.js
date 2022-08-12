@@ -36,8 +36,10 @@ const Register = () => {
     <div className="signin col">
       <div className="card-overlay centered">
         <form className="col" onSubmit={handleSubmit}>
+          <br></br>
           <div className="input-wrapper">
             <label htmlFor="name">Name</label>
+            <br></br>
             <input
               onChange={handleChange}
               name="name"
@@ -47,8 +49,10 @@ const Register = () => {
               required
             />
           </div>
+          <br></br>
           <div className="input-wrapper">
             <label htmlFor="email">Email</label>
+            <br></br>
             <input
               onChange={handleChange}
               name="email"
@@ -58,9 +62,10 @@ const Register = () => {
               required
             />
           </div>
-
+          <br></br>
           <div className="input-wrapper">
             <label htmlFor="password">Password</label>
+            <br></br>
             <input
               onChange={handleChange}
               type="password"
@@ -69,8 +74,10 @@ const Register = () => {
               required
             />
           </div>
+          <br></br>
           <div className="input-wrapper">
             <label htmlFor="confirmPassword">Confirm Password</label>
+            <br></br>
             <input
               onChange={handleChange}
               type="password"
@@ -79,6 +86,7 @@ const Register = () => {
               required
             />
           </div>
+          <br></br>
           <button
             disabled={
               !formValues.email ||
