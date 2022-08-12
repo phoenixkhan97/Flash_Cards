@@ -63,21 +63,7 @@ const deleteCard = async () => {
   }
 }
 
-const main = async () => {
-  try {
-    await getCardById,
-      await getAllByType,
-      await createCard,
-      await updateCard,
-      await deleteCard
-  } catch (error) {
-    console.log(error)
-  } finally {
-    sequelize.close()
-  }
-}
 
-main()
 module.exports = {
   getCardById,
   getAllByType,

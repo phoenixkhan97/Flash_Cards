@@ -6,7 +6,7 @@ Router.get('/card/types', controller.getAllByType)
 
 Router.post('/:card_id', controller.createCard)
 
-Router.update('/:card_id', controller.updateCard)
+Router.put('/:card_id', controller.updateCard)
 
-Router.destroy('/:card_id', controller.deleteCard)
+Router.delete('/:card_id', controller.deleteCard)
 module.exports = Router

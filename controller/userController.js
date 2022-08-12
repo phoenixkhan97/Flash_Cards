@@ -11,16 +11,9 @@ const getUserById = async (req, res) => {
   }
 }
 
-// const main = async () => {
-//   try {
-//     await getUserById()
-//   } catch (error) {
-//     console.log(error)
-//   } finally {
-//     sequelize.close()
-//   }
-// }
+
 
 module.exports = {
-  getUserById
+    getUserById
 }
+
