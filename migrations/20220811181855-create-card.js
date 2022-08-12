@@ -17,8 +17,9 @@ module.exports = {
       answer: {
         type: Sequelize.STRING
       },
-      cretorId: {
+      creatorId: {
         type: Sequelize.INTEGER,
+        field: 'creator_id',
         onDelete: 'CASCADE',
         references: {
           model: 'users',

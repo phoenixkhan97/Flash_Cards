@@ -8,7 +8,11 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Card.belongsTo(models.User, { foreignKey: 'creatorId' })
+      Card.belongsTo(models.User, { foreignKey: 'creator_id' }),
+        Card.belongsToMany(models.User, {
+          through: models.Library,
+          foreignKey: 'cardId'
+        })
     }
   }
   Card.init(
@@ -16,8 +20,9 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       question: DataTypes.STRING,
       answer: DataTypes.STRING,
-      cretorId: {
+      creatorId: {
         type: DataTypes.INTEGER,
+        field: 'creator_id',
         onDelete: 'CASCADE',
         references: {
           model: 'users',
