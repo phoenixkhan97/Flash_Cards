@@ -23,12 +23,12 @@ const getAllTypes = async (req, res) => {
 
 const getAllByType = async (req, res) => {
   try {
-    const getType = await Card.findAll({
+    const getByType = await Card.findAll({
       where: { type: req.params.type }
     })
-    res.send(getType)
+    res.send(getByType)
   } catch (error) {
-    console.log(error)
+    throw error
   }
 }
 
