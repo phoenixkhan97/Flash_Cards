@@ -28,7 +28,7 @@ const getAllByType = async (req, res) => {
     })
     res.send(getType)
   } catch (error) {
-    console.log(error)
+    throw error
   }
 }
 
