@@ -8,7 +8,13 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+    
+      Library.belongsTo(models.User,{
+        as: 'library',
+        through:'userId',
+        foreignKey: 'library_id'
+      })
+    
     }
   }
   Library.init(

@@ -9,9 +9,14 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Card.belongsTo(models.User, { foreignKey: 'creator_id' }),
-        Card.belongsToMany(models.User, {
+        Card.belongsTo(models.User, {
           through: models.Library,
-          foreignKey: 'card_id'
+          foreignKey: 'cards_id'
+        }),
+        Card.belongsTo(models.Library,{
+          as:'card',
+          through: models.library,
+          foreignKey: 'cards_id'
         })
     }
   }
