@@ -33,12 +33,14 @@ Router.post(
   controller.createCard
 )
 
+
 Router.put(
   '/:card_id',
   middleware.stripToken,
   middleware.verifyToken,
   controller.updateCard
 )
+
 
 Router.delete(
   '/:card_id',
@@ -47,3 +49,4 @@ Router.delete(
   controller.deleteCard
 )
 module.exports = Router
+
