@@ -32,6 +32,19 @@ const getAllByType = async (req, res) => {
   }
 }
 
+const getAllByTypeAndUserId = async (req, res) => {
+  try {
+    let userId = req.params.user_id
+    let type = req.params.type
+    let findCards = await Card.findAll({
+      where: { creatorId: userId, type: type }
+    })
+    res.send(findCards)
+  } catch (error) {
+    throw error
+  }
+}
+
 const createCard = async (req, res) => {
   try {
     let creatorId = parseInt(req.params.user_id)
@@ -77,6 +90,7 @@ module.exports = {
   getCardById,
   getAllTypes,
   getAllByType,
+  getAllByTypeAndUserId,
   createCard,
   updateCard,
   deleteCard
