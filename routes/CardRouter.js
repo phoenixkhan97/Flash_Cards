@@ -8,6 +8,5 @@ Router.get("/find/:user_id/:type", controller.getAllByTypeAndUserId);
 Router.post("/:user_id", controller.createCard);
 
 Router.put("/:card_id", controller.updateCard);
-
 Router.delete("/:card_id", controller.deleteCard);
 module.exports = Router;
