@@ -21,16 +21,6 @@ const getAllTypes = async (req, res) => {
   }
 }
 
-const getAllByType = async (req, res) => {
-  try {
-    const getByType = await Card.findAll({
-      where: { type: req.params.type }
-    })
-    res.send(getByType)
-  } catch (error) {
-    throw error
-  }
-}
 
 const getAllByTypeAndUserId = async (req, res) => {
   try {
@@ -89,7 +79,6 @@ const deleteCard = async (req, res) => {
 module.exports = {
   getCardById,
   getAllTypes,
-  getAllByType,
   getAllByTypeAndUserId,
   createCard,
   updateCard,
