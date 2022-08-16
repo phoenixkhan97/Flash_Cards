@@ -1,13 +1,13 @@
-const Router = require('express').Router()
-const controller = require('../controller/cardController')
+const Router = require("express").Router();
+const controller = require("../controller/cardController");
 
-Router.get('/:card_id', controller.getCardById)
-Router.get('/card/:user_id', controller.getAllTypes)
-Router.get('/cards/:type', controller.getAllByType)
+Router.get("/:card_id", controller.getCardById);
+Router.get("/card/:user_id", controller.getAllTypes);
+Router.get("/cards/:type", controller.getAllByType);
 
-Router.post('/:user_id', controller.createCard)
+Router.post("/:user_id", controller.createCard);
 
-Router.put('/:card_id', controller.updateCard)
+Router.put("/:card_id", controller.updateCard);
 
-Router.delete('/:card_id', controller.deleteCard)
-module.exports = Router
+Router.delete("/:card_id", controller.deleteCard);
+module.exports = Router;
