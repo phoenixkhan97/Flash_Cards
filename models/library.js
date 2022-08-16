@@ -9,12 +9,6 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
     
-      Library.belongsTo(models.User,{
-        as: 'library',
-        through:'userId',
-        foreignKey: 'library_id'
-      })
-    
     }
   }
   Library.init(

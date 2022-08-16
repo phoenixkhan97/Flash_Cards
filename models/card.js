@@ -9,10 +9,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Card.belongsTo(models.User, { foreignKey: 'creator_id' }),
-        Card.belongsTo(models.User, {
-          through: models.Library,
-          foreignKey: 'cards_id'
-        }),
+  
         Card.belongsTo(models.Library,{
           as:'card',
           through: models.library,
