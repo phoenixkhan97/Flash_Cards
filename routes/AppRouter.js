@@ -6,5 +6,6 @@ const AuthRouter = require('./AuthRouter')
 Router.use('/user', UserRouter)
 Router.use('/card', CardRouter)
 Router.use('/auth', AuthRouter)
+Router.use('/library', LibraryRouter)
 
 module.exports = Router
