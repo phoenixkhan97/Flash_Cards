@@ -12,8 +12,8 @@ Router.get(
 )
 Router.get(
   '/card/:user_id',
-  //   middleware.stripToken,
-  //   middleware.verifyToken,
+  middleware.stripToken,
+  middleware.verifyToken,
   controller.getAllTypes
 )
 
@@ -32,8 +32,8 @@ Router.get(
 )
 Router.get(
   '/find/:user_id/:type',
-  //   middleware.stripToken,
-  //   middleware.verifyToken,
+  middleware.stripToken,
+  middleware.verifyToken,
   controller.getAllByTypeAndUserId
 )
 Router.post(

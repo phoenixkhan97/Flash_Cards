@@ -11,9 +11,17 @@ const getUserById = async (req, res) => {
   }
 }
 
-
-
-module.exports = {
-    getUserById
+const getUserBySearch = async (req, res) => {
+  try {
+    let userName = req.query.search
+    const userSearch = await User.find({ name: userName })
+    res.send(userSearch)
+  } catch (error) {
+    throw error
+  }
 }
 
+module.exports = {
+  getUserById,
+  getUserBySearch
+}
