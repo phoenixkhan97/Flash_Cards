@@ -11,17 +11,20 @@ const getUserById = async (req, res) => {
   }
 }
 
-const getUserBySearch = async (req, res) => {
+const updateUserName = async (req, res) => {
   try {
-    let userName = req.query.search
-    const userSearch = await User.find({ name: userName })
-    res.send(userSearch)
+    let userId = req.params.id
+    const userUpdate = await User.update(req.body, {
+      where: { id: userId },
+      returning: true
+    })
+    res.send(userUpdate)
   } catch (error) {
-    throw error
+    console.log(error)
   }
 }
 
 module.exports = {
   getUserById,
-  getUserBySearch
+  updateUserName
 }

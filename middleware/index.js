@@ -43,9 +43,9 @@ const stripToken = (req, res, next) => {
 }
 
 module.exports = {
-  stripToken,
-  verifyToken,
-  createToken,
+  hashPassword,
   comparePassword,
-  hashPassword
+  createToken,
+  verifyToken,
+  stripToken
 }
