@@ -4,10 +4,8 @@ const middleware = require('../middleware')
 
 Router.get(
   '/:card_id',
-
   //   middleware.stripToken,
   //   middleware.verifyToken,
-
   controller.getCardById
 )
 Router.get(
@@ -19,8 +17,8 @@ Router.get(
 
 Router.get(
   '/find/:user_id/:type',
-  //   middleware.stripToken,
-  //   middleware.verifyToken,
+  middleware.stripToken,
+  middleware.verifyToken,
   controller.getAllByTypeAndUserId
 )
 Router.post(
