@@ -11,9 +11,20 @@ const getUserById = async (req, res) => {
   }
 }
 
-
-
-module.exports = {
-    getUserById
+const updateUserName = async (req, res) => {
+  try {
+    let userId = req.params.id
+    const userUpdate = await User.update(req.body, {
+      where: { id: userId },
+      returning: true
+    })
+    res.send(userUpdate)
+  } catch (error) {
+    console.log(error)
+  }
 }
 
+module.exports = {
+  getUserById,
+  updateUserName
+}

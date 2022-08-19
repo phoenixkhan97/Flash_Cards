@@ -1,12 +1,47 @@
 const Router = require('express').Router()
 const controller = require('../controller/cardController')
+const middleware = require('../middleware')
 
-Router.get('/card', controller.getCardById)
-Router.get('/card/types', controller.getAllByType)
+Router.get(
+  '/:card_id',
+  //   middleware.stripToken,
+  //   middleware.verifyToken,
 
-Router.post('/:user_id', controller.createCard)
+  controller.getCardById
+)
+Router.get(
+  '/card/:user_id',
+  //   middleware.stripToken,
+  //   middleware.verifyToken,
+  controller.getAllTypes
+)
 
-Router.put('/:card_id', controller.updateCard)
+Router.get(
+  '/find/:user_id/:type',
 
-Router.delete('/:card_id', controller.deleteCard)
+  //   middleware.stripToken,
+  //   middleware.verifyToken,
+
+  controller.getAllByTypeAndUserId
+)
+Router.post(
+  '/:user_id',
+  // middleware.stripToken,
+  // middleware.verifyToken,
+  controller.createCard
+)
+
+Router.put(
+  '/:card_id',
+  //   middleware.stripToken,
+  //   middleware.verifyToken,
+  controller.updateCard
+)
+
+Router.delete(
+  '/:card_id',
+  //   middleware.stripToken,
+  //   middleware.verifyToken,
+  controller.deleteCard
+)
 module.exports = Router

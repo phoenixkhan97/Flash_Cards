@@ -1,6 +1,6 @@
 const { Card, Library, User, sequelize } = require('../models')
 
-const getCardById = async () => {
+const getCardById = async (req, res) => {
   try {
     const getCardId = await Card.findByPk(req.params.card_id)
     res.send(getCardId)
@@ -9,14 +9,29 @@ const getCardById = async () => {
   }
 }
 
-const getAllByType = async () => {
+const getAllTypes = async (req, res) => {
   try {
-    const getType = await Card.findAll({
-      where: { type: typeId }
+    const getTypes = await Card.findAll({
+      where: { creatorId: req.params.user_id },
+      attributes: ['type']
     })
-    res.send(getType)
+    res.send(getTypes)
   } catch (error) {
     console.log(error)
+  }
+}
+
+
+const getAllByTypeAndUserId = async (req, res) => {
+  try {
+    let userId = req.params.user_id
+    let type = req.params.type
+    let findCards = await Card.findAll({
+      where: { creatorId: userId, type: type }
+    })
+    res.send(findCards)
+  } catch (error) {
+    throw error
   }
 }
 
@@ -34,14 +49,12 @@ const createCard = async (req, res) => {
   }
 }
 
-const updateCard = async () => {
+const updateCard = async (req, res) => {
   try {
     let cardId = parseInt(req.params.card_id)
     let updatedCard = await Card.update(req.body, {
-      where: {
-        id: cardId,
-        returning: true
-      }
+      where: { id: cardId },
+      returning: true
     })
     res.send(updatedCard)
   } catch (error) {
@@ -49,7 +62,7 @@ const updateCard = async () => {
   }
 }
 
-const deleteCard = async () => {
+const deleteCard = async (req, res) => {
   try {
     let cardId = parseInt(req.params.card_id)
     await Card.destroy({
@@ -65,7 +78,8 @@ const deleteCard = async () => {
 
 module.exports = {
   getCardById,
-  getAllByType,
+  getAllTypes,
+  getAllByTypeAndUserId,
   createCard,
   updateCard,
   deleteCard
